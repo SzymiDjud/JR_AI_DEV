@@ -14,13 +14,13 @@ def read_article(file_path):
 
 def generate_html(article_content):
     prompt = (
-        "As an IT specialist, transform the following article into HTML code, using appropriate HTML tags to structure the content. "
+        "As an IT specialist, transform the following article into HTML code, enclosing the entire content within <article>."
         "Identify places where images should be inserted, using the <img> tag with the src attribute set to 'image_placeholder.jpg'. "
         "Add an alt attribute to each image with a precise prompt that can be used to generate the image. "
         "Include captions under the images using the appropriate HTML tag. "
         "Do not include any CSS styling or JavaScript code. "
         "Do not include <html>, <head>, or <body> tags.\n\n"
-        
+        "Return only the HTML code, without any ``` or other code block markers. "
         f"Article:\n{article_content}"
     )
     
